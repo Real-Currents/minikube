@@ -49,6 +49,7 @@ RestartSec=3
 ExecStart={{.LocalkubeStartCmd}}
 
 ExecReload=/bin/kill -s HUP $MAINPID
+Environment='GODEBUG=netdns=go'
 
 [Install]
 WantedBy=multi-user.target
